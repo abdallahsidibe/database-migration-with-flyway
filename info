@@ -1,0 +1,30 @@
+1. table account:
+Account:
+    id
+    name
+    listAddress
+
+si je change la structure de la table Account en:
+Account:
+    id
+    lastName
+    firstName
+    listAddress
+
+Je remarque que name n'est pas suppprimé, j'ai:
+Account:
+    id
+    name
+    lastName
+    firstName
+    listAddress
+
+une manière de resoudre ce problème est d'ecrire un script sql
+qui permettra de supprimer et recreer la table avec les
+nouvelles mises à jour
+
+pour cela, il faut signifier à spring qu'on a du script  sql à exécuter:
+spring.sql.init.mode=always
+
+et enlever la partie ddl-auto
+spring.jpa.hibernate.ddl-auto=update
