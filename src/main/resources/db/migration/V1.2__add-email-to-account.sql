@@ -1,2 +1,2 @@
 ALTER TABLE accounts
-    add email varchar(255) UNIQUE;
+    ADD email VARCHAR(255) UNIQUE;
